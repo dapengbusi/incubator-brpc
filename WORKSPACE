@@ -30,7 +30,6 @@ http_archive(
 http_archive(
   name = "com_google_protobuf",
   strip_prefix = "protobuf-3.9.0",
-  sha256 = "9510dd2afc29e7245e9e884336f848c8a6600a14ae726adb6befdb4f786f0be2",
   type = "zip",
   url = "https://github.com/protocolbuffers/protobuf/archive/v3.9.0.zip",
 )
