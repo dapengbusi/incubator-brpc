@@ -500,7 +500,7 @@ int Server::AddBuiltinServices() {
         return -1;
     }
 
-#if !BRPC_WITH_GLOG
+#if 0
     if (AddBuiltinService(new (std::nothrow) VLogService)) {
         LOG(ERROR) << "Fail to add VLogService";
         return -1;

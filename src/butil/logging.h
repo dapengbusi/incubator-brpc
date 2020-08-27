@@ -32,7 +32,7 @@
 #include "butil/atomicops.h" // Used by LOG_EVERY_N, LOG_FIRST_N etc
 #include "butil/time.h"      // gettimeofday_us()
 
-#if BRPC_WITH_GLOG
+#if 1
 # include <glog/logging.h>
 # include <glog/raw_logging.h>
 // define macros that not implemented in glog

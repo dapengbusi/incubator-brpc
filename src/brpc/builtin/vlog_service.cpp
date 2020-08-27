@@ -16,7 +16,7 @@
 // under the License.
 
 
-#if !BRPC_WITH_GLOG
+#if 0
 
 #include "brpc/log.h"
 #include "brpc/controller.h"           // Controller

@@ -19,7 +19,7 @@
 #ifndef  BRPC_VLOG_SERVICE_H
 #define  BRPC_VLOG_SERVICE_H
 
-#if !BRPC_WITH_GLOG
+#if 0
 
 #include <ostream>
 #include "brpc/builtin_service.pb.h"
