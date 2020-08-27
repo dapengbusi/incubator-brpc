@@ -123,11 +123,7 @@ genrule(
 #ifdef BRPC_WITH_GLOG
 #undef BRPC_WITH_GLOG
 #endif
-#define BRPC_WITH_GLOG """ + select({
-    ":with_glog": "1",
-    "//conditions:default": "0",
-}) +
-"""
+#define BRPC_WITH_GLOG 1
 #endif  // BUTIL_CONFIG_H
 EOF
     """
@@ -314,10 +310,8 @@ objc_library(
     ],
     deps = [
         "@com_github_gflags_gflags//:gflags",
-    ] + select({
-        ":with_glog": ["@com_github_google_glog//:glog"],
-        "//conditions:default": [],
-    }),
+        "@com_github_google_glog//:glog"
+    ],
     includes = ["src/"],
     enable_modules = True,
     tags = ["manual"],
@@ -340,11 +334,8 @@ cc_library(
     deps = [
         "@com_google_protobuf//:protobuf",
         "@com_github_gflags_gflags//:gflags",
-    ] + select({
-        ":with_glog": ["@com_github_google_glog//:glog"],
-        ":darwin": [":macos_lib"],
-        "//conditions:default": [],
-    }),
+        "@com_github_google_glog//:glog"
+    ],
     includes = [
         "src/",
     ],
