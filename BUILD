@@ -21,7 +21,7 @@ load(":bazel/brpc.bzl", "brpc_proto_library")
 
 config_setting(
     name = "with_glog",
-    define_values = {"with_glog": "true"},
+    define_values = {"with_glog": "false"},
     visibility = ["//visibility:public"],
 )
 
@@ -310,7 +310,7 @@ objc_library(
     ],
     deps = [
         "@com_github_gflags_gflags//:gflags",
-        "@com_github_google_glog//:glog"
+        "@com_google_glog//:glog"
     ],
     includes = ["src/"],
     enable_modules = True,
@@ -334,7 +334,7 @@ cc_library(
     deps = [
         "@com_google_protobuf//:protobuf",
         "@com_github_gflags_gflags//:gflags",
-        "@com_github_google_glog//:glog"
+        "@com_google_glog//:glog"
     ],
     includes = [
         "src/",
